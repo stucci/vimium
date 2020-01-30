@@ -151,6 +151,7 @@ Commands =
       "scrollToRight",
       "reload",
       "copyCurrentUrl",
+      "copyCurrentUrlByMdStyle",
       "openCopiedUrlInCurrentTab",
       "openCopiedUrlInNewTab",
       "goUp",
@@ -275,6 +276,7 @@ defaultKeyMappings =
   "]]": "goNext"
 
   "yy": "copyCurrentUrl"
+  "Y": "copyCurrentUrlByMdStyle"
 
   "p": "openCopiedUrlInCurrentTab"
   "P": "openCopiedUrlInNewTab"
@@ -340,6 +342,7 @@ commandDescriptions =
   toggleViewSource: ["View page source", { noRepeat: true }]
 
   copyCurrentUrl: ["Copy the current URL to the clipboard", { noRepeat: true }]
+  copyCurrentUrlByMdStyle: ["Copy the current URL to the clipboard by md style", { noRepeat: true }]
   openCopiedUrlInCurrentTab: ["Open the clipboard's URL in the current tab", { noRepeat: true }]
   openCopiedUrlInNewTab: ["Open the clipboard's URL in a new tab", { repeatLimit: 20 }]
 

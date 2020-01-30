@@ -92,6 +92,12 @@ NormalModeCommands =
       url = url[0..25] + "...." if 28 < url.length
       HUD.showForDuration("Yanked #{url}", 2000)
 
+  copyCurrentUrlByMdStyle: ->
+    chrome.runtime.sendMessage { handler: "getCurrentTabUrl" }, (url) ->
+      HUD.copyToClipboard "(title)[#{url}]"
+      url = url[0..25] + "...." if 28 < url.length
+      HUD.showForDuration("Yanked #{url}", 2000)
+
   openCopiedUrlInNewTab: (count) ->
     HUD.pasteFromClipboard (url) ->
       chrome.runtime.sendMessage { handler: "openUrlInNewTab", url, count }
